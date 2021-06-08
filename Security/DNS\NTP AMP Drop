@@ -1,0 +1,5 @@
+/ip firewall filter
+add action=drop chain=input comment="DNS Amp Drop" dst-port=53 in-interface=ether1 protocol=tcp
+add action=drop chain=input dst-port=53 in-interface=ether1 protocol=udp
+add action=drop chain=input comment="NTP Amp Drop" dst-port=123 in-interface=ether1 protocol=tcp
+add action=drop chain=input dst-port=123 in-interface=ether1 protocol=udp
