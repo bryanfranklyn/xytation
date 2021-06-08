@@ -1,0 +1,288 @@
+### note - place in file /usr/bin ###
+### note - to be run after server reboot ###
+
+dig @127.0.0.1 youtube.com NS -p 5335 +short
+
+dig @127.0.0.1 youtube.com SOA -p 5335 +short
+
+dig @127.0.0.1 netflix.com NS -p 5335 +short
+
+dig @127.0.0.1 netflix.com SOA -p 5335 +short
+
+dig @127.0.0.1 showmax.com NS -p 5335 +short
+
+dig @127.0.0.1 showmax.com SOA -p 5335 +short
+
+dig @127.0.0.1 ookla.net NS -p 5335 +short
+
+dig @127.0.0.1 ookla.net SOA -p 5335 +short
+
+dig @127.0.0.1 speedtest.net NS -p 5335 +short
+
+dig @127.0.0.1 speedtest.net SOA -p 5335 +short
+
+dig @127.0.0.1 google.com NS -p 5335 +short
+
+dig @127.0.0.1 google.com SOA -p 5335 +short
+
+dig @127.0.0.1 www.eu-west-1.internal.dradis.netflix.com NS -p 5335 +short
+
+dig @127.0.0.1 www.eu-west-1.internal.dradis.netflix.com SOA -p 5335 +short
+
+dig @127.0.0.1 www.dradis.netflix.com NS -p 5335 +short
+
+dig @127.0.0.1 www.dradis.netflix.com SOA -p 5335 +short
+
+dig @127.0.0.1 uiboot.netflix.com NS -p 5335 +short
+
+dig @127.0.0.1 uiboot.netflix.com SOA -p 5335 +short
+
+dig @127.0.0.1 secure.nflxvideo.net NS -p 5335 +short
+
+dig @127.0.0.1 secure.nflxvideo.net SOA -p 5335 +short
+
+dig @127.0.0.1 secure.netflix.com NS -p 5335 +short
+
+dig @127.0.0.1 secure.netflix.com SOA -p 5335 +short
+
+dig @127.0.0.1 push.prod.netflix.com NS -p 5335 +short
+
+dig @127.0.0.1 push.prod.netflix.com SOA -p 5335 +short
+
+dig @127.0.0.1 nflxvideo.net NS -p 5335 +short
+
+dig @127.0.0.1 nflxvideo.net SOA -p 5335 +short
+
+dig @127.0.0.1 nflxso.net NS -p 5335 +short
+
+dig @127.0.0.1 nflxso.net SOA -p 5335 +short
+
+dig @127.0.0.1 nflxsearch.net NS -p 5335 +short
+
+dig @127.0.0.1 nflxsearch.net SOA -p 5335 +short
+
+dig @127.0.0.1 nflximg.net NS -p 5335 +short
+
+dig @127.0.0.1 nflximg.net SOA -p 5335 +short
+
+dig @127.0.0.1 nflximg.com NS -p 5335 +short
+
+dig @127.0.0.1 nflximg.com SOA -p 5335 +short
+
+dig @127.0.0.1 nflxext.com NS -p 5335 +short
+
+dig @127.0.0.1 nflxext.com SOA -p 5335 +short
+
+dig @127.0.0.1 nccp.netflix.com NS -p 5335 +short
+
+dig @127.0.0.1 nccp.netflix.com SOA -p 5535 +short
+
+dig @127.0.0.1 movies.netflix.com NS -p 5335 +short
+
+dig @127.0.0.1 movies.netflix.com SOA -p 5335 +short
+
+dig @127.0.0.1 meechum.netflix.com NS -p 5335 +short
+
+dig @127.0.0.1 meechum.netflix.com SOA -p 5335 +short
+
+dig @127.0.0.1 customerevents.netflix.com NS -p 5335 +short
+
+dig @127.0.0.1 customerevents.netflix.com SOA -p 5335 +short
+
+dig @127.0.0.1 contenthub.netflixstudios.com NS -p 5335 +short
+
+dig @127.0.0.1 contenthub.netflixstudios.com SOA -p 5335 +short
+
+dig @127.0.0.1 backlot-api.prod.netflix.net NS -p 5335 +short
+
+dig @127.0.0.1 backlot-api.prod.netflix.net SOA -p 5335 +short
+
+dig @127.0.0.1 appboot.netflix.com NS -p 5335 +short
+
+dig @127.0.0.1 appboot.netflix.com SOA -p 5335 +short
+
+dig @127.0.0.1 api-global.netflix.com NS -p 5335 +short
+
+dig @127.0.0.1 api-global.netflix.com SOA -p 5335 +short
+
+dig @127.0.0.1 0cc-0-1167-299.1.nflxso.net NS -p 5335 +short
+
+dig @127.0.0.1 0cc-0-1167-299.1.nflxso.net SOA -p 5335 +short
+
+dig @127.0.0.1 api-global.netflix.com NS -p 5335 +short
+
+dig @127.0.0.1 api-global.netflix.com SOA -p 5335 +short
+
+dig @127.0.0.1 api-global.dradis.netflix.com NS -p 5335 +short
+
+dig @127.0.0.1 api-global.dradis.netflix.com SOA -p 5335 +short
+
+dig @127.0.0.1 nrdp.prod.cloud.netflix.com NS -p 5335 +short
+
+dig @127.0.0.1 nrdp.prod.cloud.netflix.com SOA -p 5335 +short
+
+dig @127.0.0.1 nrdp.prod.dradis.netflix.com NS -p 5335 +short
+
+dig @127.0.0.1 nrdp.prod.dradis.netflix.com SOA -p 5335 +short
+
+dig @127.0.0.1 nrdp.prod.eu-west-1.internal.dradis.netflix.com NS -p 5335 +short
+
+dig @127.0.0.1 nrdp.prod.eu-west-1.internal.dradis.netflix.com SOA -p 5335 +short
+
+dig @127.0.0.1 api-global.eu-west-1.origin.prodaa.netflix.com NS -p 5335 +short
+
+dig @127.0.0.1 api-global.eu-west-1.origin.prodaa.netflix.com SOA -p 5335 +short
+
+dig @127.0.0.1 dstvi.dstv.com NS -p 5335 +short
+
+dig @127.0.0.1 dstvi.dstv.com SOA -p 5335 +short
+
+dig @127.0.0.1 explora.dstvcdn.com NS -p 5335 +short
+
+dig @127.0.0.1 explora.dstvcdn.com SOA -p 5335 +short
+
+dig @127.0.0.1 za-cptteraco-08-napafrica.cdn.showmax.com NS -p 5335 +short
+
+dig @127.0.0.1 za-cptteraco-08-napafrica.cdn.showmax.com SOA -p 5335 +short
+
+dig @127.0.0.1 log.showmax.com NS -p 5335 +short
+
+dig @127.0.0.1 log.showmax.com SOA -p 5335 +short
+
+dig @127.0.0.1 mail.yahoo.com NS -p 5335 +short
+
+dig @127.0.0.1 mail.yahoo.com SOA -p 5335 +short
+
+dig @127.0.0.1 login.yahoo.com NS -p 5335 +short
+
+dig @127.0.0.1 login.yahoo.com SOA -p 5335 +short
+
+dig @127.0.0.1 za.yahoo.com NS -p 5335 +short
+
+dig @127.0.0.1 za.yahoo.com SOA -p 5335 +short
+
+dig @127.0.0.1 yahoo.com NS -p 5335 +short
+
+dig @127.0.0.1 yahoo.com SOA -p 5335 +short
+
+dig @127.0.0.1 gmail.com NS -p 5335 +short
+
+dig @127.0.0.1 gmail.com SOA -p 5335 +short
+
+dig @127.0.0.1 accounts.google.com NS -p 5335 +short
+
+dig @127.0.0.1 accounts.google.com SOA -p 5335 +short
+
+dig @127.0.0.1 mail.google.com NS -p 5335 +short
+
+dig @127.0.0.1 mail.google.com SOA -p 5335 +short
+
+dig @127.0.0.1 ut-public-service-prod10.ol.epicgames.com NS -p 5335 +short
+
+dig @127.0.0.1 ut-public-service-prod10.ol.epicgames.com SOA -p 5335 +short
+
+dig @127.0.0.1 tracking.epicgames.com NS -p 5335 +short
+
+dig @127.0.01 tracking.epicgames.com SOA -p 5335 +short
+
+dig @127.0.0.1 store.steampowered.com NS -p 5335 +short
+
+dig @127.0.0.1 store.steampowered.com SOA -p 5335 +short
+
+dig @127.0.0.1 steamusercontent.com NS -p 5335 +short
+
+dig @127.0.0.1 steamusercontent.com SOA -p 5335 +short
+
+dig @127.0.0.1 steamstatic.com NS -p 5335 +short
+
+dig @127.0.0.1 steamstatic.com SOA -p 5335 +short
+
+dig @127.0.0.1 steampowered.com NS -p 5335 +short
+
+dig @127.0.0.1 steampowered.com SOA -p 5335 +short
+
+dig @127.0.0.1 steamgames.com NS -p 5335 +short
+
+dig @127.0.0.1 steamgames.com SOA -p 5335 +short
+
+dig @127.0.0.1 ut-public-service-prod10.ol.epicgames.com NS -p 5335 +short
+
+dig @127.0.0.1 ut-public-service-prod10.ol.epicgames.com SOA -p 5335 +short
+
+dig @127.0.0.1 tracking.epicgames.com NS -p 5335 +short
+
+dig @127.0.01 tracking.epicgames.com SOA -p 5335 +short
+
+dig @127.0.0.1 store.steampowered.com NS -p 5335 +short
+
+dig @127.0.0.1 store.steampowered.com SOA -p 5335 +short
+
+dig @127.0.0.1 steamusercontent.com NS -p 5335 +short
+
+dig @127.0.0.1 steamusercontent.com SOA -p 5335 +short
+
+dig @127.0.0.1 steamstatic.com NS -p 5335 +short
+
+dig @127.0.0.1 steamstatic.com SOA -p 5335 +short
+
+dig @127.0.0.1 steampowered.com NS -p 5335 +short
+
+dig @127.0.0.1 steampowered.com SOA -p 5335 +short
+
+dig @127.0.0.1 steamgames.com NS -p 5335 +short
+
+dig @127.0.0.1 steamgames.com SOA -p 5335 +short
+
+dig @127.0.0.1 steamcontent.com NS -p 5335 +short
+
+dig @127.0.0.1 steamcontent.com SOA -p 5335 +short
+
+dig @127.0.0.1 steamcommunity.com NS -p 5335 +short
+
+dig @127.0.0.1 steamcommunity.com SOA -p 5335 +short
+
+dig @127.0.0.1 qosping-aws-us-west-2.ol.epicgames.com NS -p 5335 +short
+
+dig @127.0.0.1 qosping-aws-us-west-2.ol.epicgames.com SOA -p 5335 +short
+
+dig @127.0.0.1 qosping-aws-us-west-1.ol.epicgames.com NS -p 5335 +short
+
+dig @127.0.0.1 qosping-aws-us-west-1.ol.epicgames.com SOA -p 5335 +short
+
+dig @127.0.0.1 qosping-aws-us-east-1.ol.epicgames.com NS -p 5335 +short
+
+dig @127.0.0.1 qosping-aws-us-east-1.ol.epicgames.com SOA -p 5335 +short
+
+dig @127.0.0.1 qosping-aws-sa-east-1.ol.epicgames.com NS -p 5335 +short
+
+dig @127.0.0.1 qosping-aws-sa-east-1.ol.epicgames.com SOA -p 5335 +short
+
+dig @127.0.0.1 qosping-aws-me-south-1.ol.epicgames.com NS -p 5335 +short
+
+dig @127.0.0.1 qosping-aws-me-south-1.ol.epicgames.com SOA -p 5335 +short
+
+dig @127.0.0.1 qosping-aws-eu-west-3.ol.epicgames.com NS -p 5335 +short
+
+dig @127.0.0.1 qosping-aws-eu-west-3.ol.epicgames.com SOA -p 5335 +short
+
+dig @127.0.0.1 qosping-aws-eu-west-2.ol.epicgames.com NS -p 5335 +short
+
+dig @127.0.0.1 qosping-aws-eu-west-2.ol.epicgames.com SOA -p 5335 +short
+
+dig @127.0.0.1 qosping-aws-eu-west-1.ol.epicgames.com NS -p 5335 +short
+
+dig @127.0.0.1 qosping-aws-eu-west-1.ol.epicgames.com SOA -p 5335 +short
+
+dig @127.0.0.1 qosping-aws-eu-south-1.ol.epicgames.com NS -p 5335 +short
+
+dig @127.0.0.1 qosping-aws-eu-south-1.ol.epicgames.com SOA -p 5335 +short
+
+dig @127.0.0.1 qosping-aws-ap-southeast-2.ol.epicgames.com NS -p 5335 +short
+
+dig @127.0.0.1 qosping-aws-ap-southeast-2.ol.epicgames.com SOA -p 5335 +short
+
+dig @127.0.0.1 datarouter.ol.epicgames.com NS -p 5335 +short
+
+dig @127.0.0.1 datarouter.ol.epicgames.com SOA -p 5335 +short
+
+clear
