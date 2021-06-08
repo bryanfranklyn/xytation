@@ -1,0 +1,3 @@
+## note - relies on DDoS script ##
+/ip firewall filter
+add action=return chain=DDoS comment="SYN/ACK Flood Detect" dst-limit=32,32,dst-address/10s protocol=tcp tcp-flags=syn,ack
