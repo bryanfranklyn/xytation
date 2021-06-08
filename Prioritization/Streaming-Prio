@@ -7,3 +7,6 @@ add action=mark-packet chain=prerouting connection-mark=Streaming-Con new-packet
 ## note - Priority and max-limit and limit-at change to your choice ##
 /queue simple
 add limit-at=5M/5M max-limit=5M/5M name="5) Streaming" packet-marks=Streaming-Pkt parent=Global priority=6/6 target=""
+
+## note - Parent Queue is important ##
+add limit-at=10M/10M max-limit=10M/10M name=Global priority=1/1 target=""
