@@ -1,0 +1,14 @@
+/ip firewall filter
+add action=accept chain=forward comment="RFC Unusual Protocols" disabled=yes
+add action=jump chain=input jump-target="RFC Unusual Protocols"
+add action=jump chain=forward jump-target="RFC Unusual Protocols"
+add action=drop chain="RFC Unusual Protocols" protocol=ggp
+add action=drop chain="RFC Unusual Protocols" protocol=st
+add action=drop chain="RFC Unusual Protocols" protocol=egp
+add action=drop chain="RFC Unusual Protocols" protocol=pup
+add action=drop chain="RFC Unusual Protocols" protocol=hmp
+add action=drop chain="RFC Unusual Protocols" protocol=xns-idp
+add action=drop chain="RFC Unusual Protocols" protocol=xtp
+add action=drop chain="RFC Unusual Protocols" protocol=rspf
+add action=drop chain="RFC Unusual Protocols" protocol=vmtp
+add action=return chain="RFC Unusual Protocols"
