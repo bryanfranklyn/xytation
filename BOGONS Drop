@@ -1,0 +1,2 @@
+/ip firewall filter
+add action=drop chain=input comment="BOGON IP's" dst-address-list=!Admins in-interface=(where your internet interface) src-address-list=BOGONS
