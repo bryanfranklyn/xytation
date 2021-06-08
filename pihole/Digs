@@ -1,4 +1,4 @@
-### note - place in file /usr/bin ###
+### note - place in file /usr/bin/(with the name digs)     once placed at /usr/bin/digs   simply run digs anywhere in your terminal###
 ### note - to be run after server reboot ###
 
 dig @127.0.0.1 youtube.com NS -p 5335 +short
