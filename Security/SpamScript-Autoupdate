@@ -1,0 +1,2 @@
+/system scheduler
+add interval=1d name="Bad IPs updater" on-event=Auto-retrieve-bad-IPs policy=ftp,reboot,read,write,policy,test,password,sniff,sensitive,romon start-date=apr/22/2021 start-time=11:05:00
