@@ -1,0 +1,10 @@
+## note - create a dns list for line 7 to exclude your dns' from being picked up ##
+## note - change in-interface=ether1 to your internet in-interface ##
+
+ip firewall filter
+add action=jump chain=input comment="DDoS Chain Creation" connection-state=new in-interface=ether1 jump-target=DDoS
+add action=jump chain=forward comment="DDoS Chain Creation" connection-state=new in-interface=ether1 disabled=yes jump-target=DDoS
+add action=return chain=DDoS comment="DDoS Return DNS Traffic (Exclude your DNS' )" dst-address-list=DNS src-address-list=DNS
+add action=return chain=DDoS comment="DDoS Return DST.Limit (>=128 rate)" dst-limit=128,64,src-and-dst-addresses/1s
+add action=add-src-to-address-list address-list=DDoS address-list-timeout=1d chain=DDoS comment="Capture DDoS"
+add action=drop chain=input src-address-list=DDoS comment="DDoS Drop"
