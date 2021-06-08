@@ -4,7 +4,7 @@ my name is xytation thought of uploading some files for mikrotik & pihole users.
 
 Categories will be in the following.
 
-1. Prioritization for "Paid for" streaming services ex. Netflix, Dstv, Twitch, Showmax, Amazon streaming service(Any input would be appreciated and credit would be givin accordingly)
+1. Prioritization for "Paid for" streaming services ex. Netflix, Dstv, Twitch, Showmax, Amazon streaming service(Any input would be appreciated and credit would be given accordingly)
 2. Game Prioritization this will include respective most common platforms: Playstaion, Xbox, Epic Games, Steam, Riot Games, Blizzard Games. *note - game ip automatically included in the list any additional ip's are welcome*
 3. Pihole Lists will be coming soon.
 4. Whatsapp list will be included, Skype still in progress...
@@ -18,7 +18,7 @@ Categories will be in the following.
 
 *note - apply and modify to suite your network needs*
 
-*note - any contribution to the lists will be givin credit in accordance*
+*note - any contribution to the lists will be given credit accordingly*
 
 For any additional info or advice feel free to contact: thenetworkguy@xytation.com
 Remember we all can learn from each other and teach each other.
