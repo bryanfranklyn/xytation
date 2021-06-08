@@ -7,3 +7,6 @@ add action=mark-packet chain=prerouting connection-mark=Games-Con new-packet-mar
 
 /queue simple
 add limit-at=4M/4M max-limit=4M/4M name="7) Games" packet-marks=Games-Pkt parent=Global priority=7/7 target=""
+
+## note - Parent Queue is important ##
+add limit-at=10M/10M max-limit=10M/10M name=Global priority=1/1 target=""
