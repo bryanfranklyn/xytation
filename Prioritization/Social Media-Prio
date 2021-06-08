@@ -3,6 +3,7 @@ add action=mark-connection chain=prerouting comment="Social Media" new-connectio
 add action=mark-connection chain=prerouting dst-address-list="Social Media" new-connection-mark=Social-Con passthrough=yes
 add action=mark-packet chain=prerouting connection-mark=Social-Con new-packet-mark=Social-Pkt passthrough=no
 
+## note - Priority and max-limit and limit-at change to your choice ##
 add limit-at=5M/5M max-limit=5M/5M name="6) Social Media" packet-marks=Social-Pkt parent=Global priority=6/6 target=""
 
 ## note - Parent Queue is important ##
