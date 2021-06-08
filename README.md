@@ -1,6 +1,6 @@
 Good Day
 
-my name is xytation thought of uploading some files for mikrotik & pihole users.
+My name is xytation thought of uploading some files for mikrotik & pihole users.
 
 Categories will be in the following.
 
