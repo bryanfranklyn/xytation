@@ -1,0 +1,4 @@
+/ip firewall mangle
+add action=mark-connection chain=prerouting comment=Whatsapp new-connection-mark=Whatsapp-Con passthrough=yes src-address-list=whatsapp_list
+add action=mark-connection chain=prerouting dst-address-list=whatsapp_list new-connection-mark=Whatsapp-Con passthrough=yes
+add action=mark-packet chain=prerouting connection-mark=Whatsapp-Con new-packet-mark=Whatsapp-Pkt passthrough=no
