@@ -15,7 +15,9 @@ Categories will be in the following.
 9. Will not include Windows updates, Linux updates, Apple/iOS updates asof yet.
 
 *note - has been modified for my network use*
+
 *note - apply and modify to suite your network needs*
+
 *note - any contribution to the lists will be givin credit in accordance*
 
 For any additional info or advice feel free to contact: xytationx@gmail.com
