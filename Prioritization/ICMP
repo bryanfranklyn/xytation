@@ -22,3 +22,6 @@ add action=drop chain=ICMP protocol=icmp
 
 /queue simple
 add limit-at=10M/10M max-limit=10M/10M name="1) ICMP" packet-marks=ICMP-Pkt parent=Global priority=1/1 queue=pcq-upload-default/pcq-download-default target=""
+
+## note - Parent Queue is important ##
+add limit-at=10M/10M max-limit=10M/10M name=Global priority=1/1 target=""
