@@ -23,3 +23,7 @@ add address=192.187.96.0/19 list=additionalblacklist
 add address=hldza.com list=additionalblacklist
 add address=80.158.0.0/20 list=additionalblacklist
 add address=5.9.124.253 list=additionalblacklist
+add address=Allan.soundsgoodstockholm.com list=additionalblacklist
+add address=192.2.0.0/16 comment=TESTING list=additionalblacklist
+add address=79.135.72.34 list=additionalblacklist
+add address=ea.skfblack.review list=additionalblacklist
