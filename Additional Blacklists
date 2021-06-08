@@ -1,0 +1,25 @@
+/ip firewall address-list
+add address=disorderstatus.ru list=additionalblacklist
+add address=80.158.59.174 list=additionalblacklist
+add address=80.158.63.78 list=additionalblacklist
+add address=zancetom.com comment=searchtopresults list=additionalblacklist
+add address=queenshippartners.com comment=searchtopresults list=additionalblacklist
+add address=88.217.172.165 list=additionalblacklist
+add address=keqakku.com list=additionalblacklist
+add address=differentia.ru comment=differentia list=additionalblacklist
+add address=searchtopresults.com comment=searchtopresults list=additionalblacklist
+add address=184.105.192.2 comment=differentia list=additionalblacklist
+add address=82.165.47.44 list=additionalblacklist
+add address=192.42.116.41 list=additionalblacklist
+add address=87.255.51.229 list=additionalblacklist
+add address=72.52.116.52 list=additionalblacklist
+add address=54.83.43.69 list=additionalblacklist
+add address=80.158.53.167 list=additionalblacklist
+add address=80.158.62.194 list=additionalblacklist
+add address=80.158.32.0/19 list=additionalblacklist
+add address=192.187.111.216/29 list=additionalblacklist
+add address=179.43.128.0/18 list=additionalblacklist
+add address=192.187.96.0/19 list=additionalblacklist
+add address=hldza.com list=additionalblacklist
+add address=80.158.0.0/20 list=additionalblacklist
+add address=5.9.124.253 list=additionalblacklist
