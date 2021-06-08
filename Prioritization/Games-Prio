@@ -1,0 +1,4 @@
+/ip firewall mangle
+add action=mark-connection chain=prerouting comment=Games new-connection-mark=Games-Con passthrough=yes src-address-list=games
+add action=mark-connection chain=prerouting dst-address-list=games new-connection-mark=Games-Con passthrough=yes
+add action=mark-packet chain=prerouting connection-mark=Games-Con new-packet-mark=Games-Pkt passthrough=no
