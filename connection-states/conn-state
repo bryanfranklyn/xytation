@@ -1,0 +1,5 @@
+/ip firewall filter
+add action=drop chain=forward comment="Connection States" connection-state=invalid,untracked
+add action=drop chain=input connection-state=invalid
+add action=accept chain=forward connection-state=established,related,new
+add action=accept chain=input connection-state=established,related,new
