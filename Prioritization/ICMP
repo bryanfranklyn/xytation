@@ -1,0 +1,18 @@
+## note - line 3-5 marks all ICMP traffic in the prerouting chain ##
+
+/ip firewall mangle
+add action=mark-connection chain=prerouting comment=ICMP new-connection-mark=ICMP-Con passthrough=yes protocol=icmp
+add action=mark-packet chain=prerouting connection-mark=ICMP-Con new-packet-mark=ICMP-Pkt passthrough=no protocol=icmp
+
+## note - line 10-11 uses the Pkt mark created by line 5, line 12-16 accepts all important ICMP traffic(this includes ping and traceroute), line 17-18 Drops the rest 
+
+/ip firewall filter
+add action=jump chain=input comment="ICMP Accept Important" jump-target=ICMP packet-mark=ICMP-Pkt protocol=icmp
+add action=jump chain=forward comment="ICMP Accept Important" jump-target=ICMP packet-mark=ICMP-Pkt protocol=icmp
+add action=accept chain=ICMP icmp-options=0:0 protocol=icmp
+add action=accept chain=ICMP icmp-options=8:0 protocol=icmp
+add action=accept chain=ICMP icmp-options=3:0 protocol=icmp
+add action=accept chain=ICMP icmp-options=11:0 protocol=icmp
+add action=accept chain=ICMP icmp-options=3:3 protocol=icmp
+add action=drop chain=ICMP protocol=icmp
+add action=drop chain=ICMP protocol=icmp
