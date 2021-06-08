@@ -16,3 +16,9 @@ add action=accept chain=ICMP icmp-options=11:0 protocol=icmp
 add action=accept chain=ICMP icmp-options=3:3 protocol=icmp
 add action=drop chain=ICMP protocol=icmp
 add action=drop chain=ICMP protocol=icmp
+
+
+## note - Priority and max-limit and limit-at change to your choice ##
+
+/queue simple
+add limit-at=10M/10M max-limit=10M/10M name="1) ICMP" packet-marks=ICMP-Pkt parent=Global priority=1/1 queue=pcq-upload-default/pcq-download-default target=""
