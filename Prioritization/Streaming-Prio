@@ -1,0 +1,4 @@
+/ip firewall mangle
+add action=mark-connection chain=prerouting comment=Streaming new-connection-mark=Streaming-Con passthrough=yes src-address-list=Streaming
+add action=mark-connection chain=prerouting dst-address-list=Streaming new-connection-mark=Streaming-Con passthrough=yes
+add action=mark-packet chain=prerouting connection-mark=Streaming-Con new-packet-mark=Streaming-Pkt passthrough=no
