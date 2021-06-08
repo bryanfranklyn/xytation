@@ -1,5 +1,9 @@
 /ip firewall mangle
-add action=mark-connection chain=prerouting comment=Download connection-bytes=20000000-0 connection-mark=!Inconet-Con connection-rate=3M-100M new-connection-mark=Download-Con passthrough=yes
-add action=mark-connection chain=prerouting connection-bytes=5000000-0 connection-limit=2,24 connection-mark=!Inconet-Con connection-rate=2M-100M new-connection-mark=Download-Con passthrough=yes
-add action=mark-connection chain=prerouting connection-bytes=10000000-0 connection-limit=2,24 connection-mark=!Inconet-Con connection-rate=500k-100M new-connection-mark=Download-Con passthrough=yes
+add action=mark-connection chain=prerouting comment=Download connection-bytes=20000000-0 connection-rate=3M-100M new-connection-mark=Download-Con passthrough=yes
+add action=mark-connection chain=prerouting connection-bytes=5000000-0 connection-limit=2,24 connection-rate=2M-100M new-connection-mark=Download-Con passthrough=yes
+add action=mark-connection chain=prerouting connection-bytes=10000000-0 connection-limit=2,24 connection-rate=500k-100M new-connection-mark=Download-Con passthrough=yes
 add action=mark-packet chain=prerouting connection-bytes=20000000-0 connection-mark=Download-Con new-packet-mark=Download-Pkt passthrough=no
+
+## note - Priority and max-limit and limit-at change to your choice ##
+/queue simple
+add limit-at=10M/10M max-limit=10M/10M name="8) Download" packet-marks=Download-Pkt parent=Global target=""
