@@ -1,0 +1,4 @@
+/ip firewall mangle
+add action=mark-connection chain=prerouting comment="Social Media" new-connection-mark=Social-Con passthrough=yes src-address-list="Social Media"
+add action=mark-connection chain=prerouting dst-address-list="Social Media" new-connection-mark=Social-Con passthrough=yes
+add action=mark-packet chain=prerouting connection-mark=Social-Con new-packet-mark=Social-Pkt passthrough=no
