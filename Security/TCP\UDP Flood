@@ -1,0 +1,5 @@
+## note - make sure to exclude dns traffic with src\dst address list ##
+
+/ip firewall filter
+add action=drop chain=input comment="TCP Flood Drop" connection-limit=128,32 dst-address-list=!DNS in-interface=ether1 limit=1,5:packet protocol=tcp src-address-list=!DNS
+add action=drop chain=input comment="UDP Flood Drop" connection-limit=128,32 dst-address-list=!DNS in-interface=ether1 limit=1,5:packet protocol=udp src-address-list=!DNS
