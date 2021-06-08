@@ -1,0 +1,77 @@
+add address=ssl.dstv.com comment=DSTV list=Streaming
+add address=dstvi.dstv.com comment=DSTV list=Streaming
+add address=explora.dstvcdn.com comment=DSTV list=Streaming
+add address=exploraapi.dstv.com comment=DSTV list=Streaming
+add address=valhalla1.dstv.com comment=DSTV list=Streaming
+add address=qos.dstv.com comment=DSTV list=Streaming
+add address=features.dstv.com comment=DSTV list=Streaming
+add address=licensev2.dstv.com comment=DSTV list=Streaming
+add address=api.showmax.com comment=Showmax list=Streaming
+add address=za-cptteraco-07-napafrica.cdn.showmax.com comment=Showmax list=Streaming
+add address=log.showmax.com comment=Showmax list=Streaming
+add address=s.youtube.com comment=Youtube list=Streaming
+add address=r1.ns.netflix.net comment=Netflix list=Streaming
+add address=r2.ns.netflix.net comment=Netflix list=Streaming
+add address=r3.ns.netflix.net comment=Netflix list=Streaming
+add address=r4.ns.netflix.net comment=Netflix list=Streaming
+add address=r5.ns.netflix.net comment=Netflix list=Streaming
+add address=r6.ns.netflix.net comment=Netflix list=Streaming
+add address=151.101.0.0/16 comment="Twitch" list=Streaming
+add address=showmax.com comment=Showmax list=Streaming
+add address=showmax.co.za comment=Showmax list=Streaming
+add address=169.255.193.0/24 comment=Showmax list=Streaming
+add address=169.255.192.0/23 comment=Showmax list=Streaming
+add address=169.255.195.0/24 comment=Showmax list=Streaming
+add address=169.255.194.0/24 comment=Showmax list=Streaming
+add address=twitch.tv comment=Twitch list=Streaming
+add address=192.108.239.0/24 comment=Twitch list=Streaming
+add address=185.42.204.0/22 comment=Twitch list=Streaming
+add address=www.dradis.netflix.com comment=Netflix list=Streaming
+add address=www.eu-west-1.internal.dradis.netflix.com comment=Netflix list=Streaming
+add address=youtube-ui.l.google.com comment=Youtube list=Streaming
+add address=youtube.com list=Streaming
+add address=www.youtube-nocookie.com list=Streaming
+add address=c.youtube.com comment=Youtube list=Streaming
+add address=ytimg.l.google.com list=Streaming
+add address=googlesyndication.com list=Streaming
+add address=ytimg.com list=Streaming
+add address=accounts.google.com list=Streaming
+add address=m.youtube.com list=Streaming
+add address=googlevideo.com list=Streaming
+add address=youtube.l.google.com list=Streaming
+add address=youtu.be list=Streaming
+add address=vimeo.com list=Streaming
+add address=vimeocdn.com list=Streaming
+add address=173.194.128.0/24 comment=Youtube list=Streaming
+add address=172.217.170.0/24 list=Streaming
+add address=nflxvideo.net comment=Netflix list=Streaming
+add address=netflix.com comment=Netflix list=Streaming
+add address=push.prod.netflix.com comment=Netflix list=Streaming
+add address=api-global.netflix.com comment=Netflix list=Streaming
+add address=0cc-0-1167-299.1.nflxso.net comment=Netflix list=Streaming
+add address=52.0.131.132 list=Streaming
+add address=3.221.228.214 list=Streaming
+add address=18.207.84.236 list=Streaming
+add address=backlot-api.prod.netflix.net comment=Netflix list=Streaming
+add address=contenthub.netflixstudios.com comment=Netflix list=Streaming
+add address=54.204.25.0/28 list=Streaming
+add address=23.23.189.144/28 list=Streaming
+add address=34.195.253.0/25 list=Streaming
+add address=meechum.netflix.com comment=Netflix list=Streaming
+add address=nflximg.com comment=Netflix list=Streaming
+add address=llnwd.net list=Streaming
+add address=secure.netflix.com comment=Netflix list=Streaming
+add address=appboot.netflix.com comment=Netflix list=Streaming
+add address=uiboot.netflix.com comment=Netflix list=Streaming
+add address=fast.com list=Streaming
+add address=nflxext.com comment=Netflix list=Streaming
+add address=secure.nflxvideo.net comment=Netflix list=Streaming
+add address=nflxsearch.net comment=Netflix list=Streaming
+add address=nflxso.net comment=Netflix list=Streaming
+add address=nflximg.net comment=Netflix list=Streaming
+add address=nccp.netflix.com comment=Netflix list=Streaming
+add address=movies.netflix.com comment=Netflix list=Streaming
+add address=customerevents.netflix.com comment=Netflix list=Streaming
+add address=btstatic.com list=Streaming
+add address=41.206.120.2 comment=Netflix list=Streaming
+add address=41.206.121.2 comment=Netflix list=Streaming
