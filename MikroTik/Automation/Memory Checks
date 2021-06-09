@@ -1,0 +1,6 @@
+### note - Memory check For Mikrotik RB4011 can be used on other RB's "([get free-memory]<10536870912) " has to be changed accordingly *tip - works in bits* ###
+
+:log info "Memory Check"
+/system resource 
+:if ([get free-memory]<10536870912) do=[/system reboot];
+:log info "Check Done"
