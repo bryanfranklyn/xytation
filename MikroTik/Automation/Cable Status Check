@@ -1,0 +1,10 @@
+### note - To check if cable status is 1Gbps and to disable and re-enable port ###
+### note - To be placed in scheduler, To be run every 30min intervals or as suited to you, Change ether5 to interface that needs to be monitored, line5 ":if ($$rate != "1Gbps")" can be changed to ":if ($$rate != "10Mbps/100Mbps/1Gbps/10Gbps/25Gbps etc... as required")" ###
+
+/interface ethernet monitor ether5 once do={
+:if ($rate != "1Gbps") do={
+/interface ethernet set ether5 disabled=yes
+/interface ethernet set ether5 disabled=no
+:log info message="ether5 reset by script";
+}
+}
