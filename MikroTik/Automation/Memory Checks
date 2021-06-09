@@ -1,4 +1,6 @@
 ### note - Memory check For Mikrotik RB4011 can be used on other RB's "([get free-memory]<10536870912) " has to be changed accordingly *tip - works in bits* ###
+### note - To be placed in scheduler and run every 10min ###
+
 
 :log info "Memory Check"
 /system resource 
