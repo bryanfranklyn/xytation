@@ -1,5 +1,7 @@
+### note - if you have anything marked as untracked just remove untracked under the connection-state ###
+
 /ip firewall filter
 add action=drop chain=forward comment="Connection States" connection-state=invalid,untracked
-add action=drop chain=input connection-state=invalid
+add action=drop chain=input connection-state=invalid,untracked
 add action=accept chain=forward connection-state=established,related,new
 add action=accept chain=input connection-state=established,related,new
