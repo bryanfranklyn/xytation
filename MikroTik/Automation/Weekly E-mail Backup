@@ -1,0 +1,9 @@
+### note - needs full user access ###
+### note - to be placed in scheduler with interval of 7d 00:00:00 with start time fitting you ###
+
+/system backup save name=Weekly_Router dont-encrypt=yes
+/export file=Weekly_Router
+tool e-mail send to="your@email.com" subject="Router Backup" body="This is the backup file for the Router" file="Weekly_Router.backup";
+tool e-mail send to="your@email.com" subject="Router rsc" body="This is the rsc file for the Router" file="Weekly_Router.rsc";
+tool e-mail send to="your@email2.com" subject="Router Backup" body="This is the backup file for the Router" file="Weekly_Router.backup";
+tool e-mail send to="your@email2.com" subject="Router rsc" body="This is the rsc file for the Router" file="Weekly_Router.rsc";
