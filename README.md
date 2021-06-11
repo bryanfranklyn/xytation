@@ -20,5 +20,5 @@ Categories will be in the following.
 
 *note - any contribution to the lists will be given credit accordingly*
 
-For any additional info or advice feel free to contact: thenetworkguy@xytation.com
+For any additional info or advice feel free to contact: thenetworkguy@xytation.com or thenetworkmaster@xytation.com
 Remember we all can learn from each other and teach each other.
