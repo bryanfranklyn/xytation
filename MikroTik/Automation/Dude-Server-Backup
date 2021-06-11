@@ -1,0 +1,60 @@
+#
+# Backup Dude to FTP
+#
+# Define variables
+:local ftphost "(local-on-net-FTPserver-ip)"
+:local ftpuser "(Your-User-with-write-Permissions-for-FTPserver)"
+:local ftppassword "(Password-For-Above-speciffied user)"
+:local ftppath "(your file path eg. "/Technical/Dude Backup/")"
+:local dudeconffilename "Dude_configuration_backup"
+:local dudedbfilename "Dude_db_backup"
+:local dudeconffileext "rsc"
+:local dudedbfileext "db"
+:local localbackuppath "(location of dude database eg. "disk2")"
+#
+# Get date and time
+#
+{
+:local curDate [/system clock get date]
+:local curTime [/system clock get time]
+:local systemName [/system identity get name]
+:local curMonth [:pick $curDate 0 3]
+ :set curMonth ( [ :find key="$curMonth" in="jan,feb,mar,apr,may,jun,jul,aug,sep,oct,nov,dec" from=-1 ] / 4 + 1)
+ if ( $curMonth < 10 ) do={
+  :set curMonth ( "0".$curMonth )
+ } else={
+  :set curMonth $curMonth
+ }
+:local curDay   [:pick $curDate 4 6]
+:local curYear  [:pick $curDate 7 13]
+:local curHour  [:pick $curTime 0 2]
+:local curMin   [:pick $curTime 3 5]
+:local now ("$curYear"."$curMonth"."$curDay")
+#
+# Make Dude backup locally
+#
+:log warn message="Dude backup locally started";
+/dude export file="$localbackuppath/$dudeconffilename_$now.$dudeconffileext"
+/dude export-db backup-file="$localbackuppath/$dudedbfilename_$now.$dudedbfileext"
+:log warn message="Dude backup locally finished";
+#
+# Copy Dude backup to FTP
+#
+:log warn message="Dude backup to FTP started";
+/tool fetch address="$ftphost" src-path="$localbackuppath/$dudeconffilename_$now.$dudeconffileext" user="$ftpuser" mode=ftp password="$ftppassword" dst-path="$ftppath/$dudeconffilename_$now.$dudeconffileext" upload=yes
+/tool fetch address="$ftphost" src-path="$localbackuppath/$dudedbfilename_$now.$dudedbfileext" user="$ftpuser" mode=ftp password="$ftppassword" dst-path="$ftppath/$dudedbfilename_$now.$dudedbfileext" upload=yes
+:log warn message="Dude backup to FTP finished";
+#
+# Remove locally created files
+#
+:log warn message="Removing locally created backups started";
+file remove "$localbackuppath/$dudeconffilename_$now.$dudeconffileext"
+file remove "$localbackuppath/$dudedbfilename_$now.$dudedbfileext"
+:log warn message="Removing locally created backups finished";
+#
+### note - remember to add your email settings under /tool/email ###
+#
+:log warn message="Sending Notification";
+/tool e-mail send to="your@mail.com" subject="Dude Backup" body="Successfully backed up dude database to ftp: $ftppath/$dudedbfilename_$now.$dudedbfileext" 
+/tool e-mail send to="your2@mail.com" subject="Dude Backup" body="Successfully backed up dude database to ftp: $ftppath/$dudedbfilename_$now.$dudedbfileext"
+}
