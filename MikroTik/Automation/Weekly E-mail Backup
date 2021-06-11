@@ -1,6 +1,10 @@
 ### note - needs full user access ###
 ### note - to be placed in scheduler with interval of 7d 00:00:00 with start time fitting you ###
 ### note - remember to add your email settings under /tool/email ###
+### note - gmail domain is used as an example only and for educational purposes only but can work to any email domain ###
+
+/tool e-mail
+set address=("your email domain eg. mail.gmail.com") from=<user@gmail.com> password="(what ever password)" port=587 user=("user@gmail.com")
 
 /system backup save name=Weekly_Router dont-encrypt=yes
 /export file=Weekly_Router
