@@ -1,5 +1,6 @@
 ### note - needs full user access ###
 ### note - to be placed in scheduler with interval of 7d 00:00:00 with start time fitting you ###
+### note - remember to add your email settings under /tool/email ###
 
 /system backup save name=Weekly_Router dont-encrypt=yes
 /export file=Weekly_Router
