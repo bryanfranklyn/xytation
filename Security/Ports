@@ -1,0 +1,18 @@
+## note - important ports to be on the look out for if you use any of them ##
+## note - still in progress of compiling ##
+
+port 20 - FTP Alt 
+port 21 - FTP
+port 22 - SSH
+port 23 - TelNet
+port 43 - WhoIs
+port 67 & 68 - DHCP
+port 69 - TFTP
+port 80 - HTTP
+port 102 - TSAP 
+port 107 - rtelnet
+port 443 - HTTPS
+port 8291 - Winbox
+port 8728 - API
+port 8729 - API-SSL
+port 
