@@ -1,1 +1,5 @@
+### note - please change your in-interface to your internet in-interface ###
+
 /ip firewall filter
+add action=drop chain=input comment="SSDP\UPnP" connection-limit=128,32 in-interface=ether1 limit=1,5:packet protocol=tcp dst-port=1900
+add action=drop chain=input comment="SSDP\UPnP" connection-limit=128,32 in-interface=ether1 limit=1,5:packet protocol=udp dst-port=1900
