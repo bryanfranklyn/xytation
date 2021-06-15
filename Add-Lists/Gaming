@@ -307,3 +307,4 @@ add address=www.xboxab.com comment=Xbox list=games
 add address=steamstore-a.akamaihd.net.edgesuite.net comment=Steam list=games
 add address=gameclipscontent-t3010.xboxlive.com comment=Xbox list=games
 add address=nsx.sec.np.dl.playstation.net.edgekey.net.globalredir.akadns.net list=games comment=Playstation
+add address=privacy.xboxlive.com.akadns.net comment=Xbox list=games
