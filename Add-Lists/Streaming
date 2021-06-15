@@ -1,3 +1,4 @@
+/ip firewall address-list
 add address=ssl.dstv.com comment=DSTV list=Streaming
 add address=dstvi.dstv.com comment=DSTV list=Streaming
 add address=explora.dstvcdn.com comment=DSTV list=Streaming
