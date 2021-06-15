@@ -75,3 +75,6 @@ add address=customerevents.netflix.com comment=Netflix list=Streaming
 add address=btstatic.com list=Streaming
 add address=41.206.120.2 comment=Netflix list=Streaming
 add address=41.206.121.2 comment=Netflix list=Streaming
+add address=za-cptteraco-02-napafrica.cdn.showmax.com comment=Showmax list=Streaming
+add address=valhalla1.dstv.com comment=Dstv list=Streaming
+add address=features.dstv.com comment=Dstv list=Streaming
