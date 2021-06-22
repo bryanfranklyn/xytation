@@ -1,5 +1,6 @@
 ## note - important ports to be on the look out for if you use any of them ##
 ## note - still in progress of compiling ##
+## note - this is a list of most commonly exploited ports ##
 
 port 20 - FTP Alt 
 port 21 - FTP
@@ -11,8 +12,34 @@ port 69 - TFTP
 port 80 - HTTP
 port 102 - TSAP 
 port 107 - rtelnet
+port 110 - PoP
+port 111 - rpcbind
+port 115 - SFTP
+port 135-139 - netbios
+port 152 - bftp
+port 161-162 - snmp
 port 443 - HTTPS
+port 554 - rtsp
+port 873 - rsync
+port 995 - PoP_SSL
+port 1080 - socks
+port 1433-1434 - ms-sql
+port 1435 - ibm-cics
+port 1518 - quadrox dvr
+port 1723 - pptp
+port 1900 - SSDP/UPnP
+port 1911 - mtp
+port 2049 - nfs
+port 3389 - rdp
+port 5000 - UPnP
+port 5007 - linux-cnc server
+port 5060-5061 - SIP
+port 5432 - postgeresql
+port 8008 - fortinet
+port 8080 - http-alt
 port 8291 - Winbox
+port 8728-8729 - API
+port 8443 - https-alt
+port 8883 - mqt(unifi cloud access)
 port 8728 - API
 port 8729 - API-SSL
-port 
