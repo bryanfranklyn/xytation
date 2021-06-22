@@ -38,12 +38,14 @@ port 1518 - quadrox dvr
 port 1723 - pptp
 port 1900 - SSDP/UPnP
 port 1911 - mtp
+port 2000 - Cisco/MikroTik Internal Speedtest
 port 2049 - nfs
 port 3389 - rdp
 port 5000 - UPnP
 port 5007 - linux-cnc server
 port 5060-5061 - SIP
 port 5432 - postgeresql
+port 5678 - MNDP/CDP
 port 8008 - fortinet
 port 8080 - http-alt
 port 8291 - Winbox
