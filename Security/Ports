@@ -6,6 +6,8 @@ port 20 - FTP Alt
 port 21 - FTP
 port 22 - SSH
 port 23 - TelNet
+port 25 - smtp
+port 26 - rsftp
 port 43 - WhoIs
 port 67 & 68 - DHCP
 port 69 - TFTP
@@ -16,11 +18,18 @@ port 110 - PoP
 port 111 - rpcbind
 port 115 - SFTP
 port 135-139 - netbios
+port 143 -Imap
 port 152 - bftp
 port 161-162 - snmp
+port 389 - LDAP
 port 443 - HTTPS
+port 465 - smtp alt
 port 554 - rtsp
+port 585 - Imap alt
+port 587 - smtp alt
+port 636 - LDAPS
 port 873 - rsync
+port 993 - Imap_SSL
 port 995 - PoP_SSL
 port 1080 - socks
 port 1433-1434 - ms-sql
