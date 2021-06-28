@@ -12,7 +12,8 @@ Categories will be in the following.
 6. Will include a script for Spam ip's sourced from various sources (for mikrotik)
 7. Will include a DDoS script and other security features (for mikrotik)
 8. Will include some Social Media sites as well (for mikrotik)
-9. Will not include Windows updates, Linux updates, Apple/iOS updates asof yet.
+9. Will not include Windows updates, Apple/iOS updates asof yet.
+10. Linux Updates Currently in Progress
 
 *note - has been modified for my network use*
 
