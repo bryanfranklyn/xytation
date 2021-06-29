@@ -48,5 +48,5 @@ file remove "$localbackuppath/$umdbfilename_$now.$umdbfileext"
 :log warn message="Removing locally created backups finished";
 #
 :log warn message="Done with UserMan backup";
-## note - for auto email backup please refer to the email section ##
+## note - for auto email backup please refer to the weekly email under the automation section ##
 }
