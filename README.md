@@ -21,5 +21,9 @@ Categories will be in the following.
 
 *note - any contribution to the lists will be given credit accordingly*
 
+*note - For home use up to 250Mbps GR3
+        For small Bussiness/ISP(up to 1Gbps) use CCR1009
+        For Large Bussiness/ISP(1Gbps+) use CCR1036/CCR1072 *
+
 For any additional info or advice feel free to contact: thenetworkguy@xytation.com or thenetworkmaster@xytation.com
 Remember we all can learn from each other and teach each other.
