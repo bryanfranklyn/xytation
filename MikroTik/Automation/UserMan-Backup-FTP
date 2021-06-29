@@ -1,0 +1,52 @@
+#
+# Backup User Manager to FTP
+#
+# Define variables
+:local ftphost "(your FTP Ip)"
+:local ftpuser "(User with write access)"
+:local ftppassword "(Pass for ftpuser)"
+:local ftppath "(Path for backup e.g. /UserMan/User-Manager Backup/"
+:local umdbfilename "um_db_backup"
+:local umdbfileext "umb"
+:local localbackuppath "(Path of where you want it to be created on MT device e.g. disk2)"
+#
+# Get date and time
+#
+{
+:local curDate [/system clock get date]
+:local curTime [/system clock get time]
+:local systemName [/system identity get name]
+:local curMonth [:pick $curDate 0 3]
+ :set curMonth ( [ :find key="$curMonth" in="jan,feb,mar,apr,may,jun,jul,aug,sep,oct,nov,dec" from=-1 ] / 4 + 1)
+ if ( $curMonth < 10 ) do={
+  :set curMonth ( "0".$curMonth )
+ } else={
+  :set curMonth $curMonth
+ }
+:local curDay   [:pick $curDate 4 6]
+:local curYear  [:pick $curDate 7 13]
+:local curHour  [:pick $curTime 0 2]
+:local curMin   [:pick $curTime 3 5]
+:local now ("$curYear"."$curMonth"."$curDay")
+#
+# Make User Manager backup locally
+#
+:log warn message="UM backup locally started";
+/tool user-manager database save name="$localbackuppath/$umdbfilename_$now.$umdbfileext"
+:log warn message="UM backup locally finished";
+#
+# Copy UM backup to FTP
+#
+:log warn message="UM backup to FTP started";
+/tool fetch address="$ftphost" src-path="$localbackuppath/$umdbfilename_$now.$umdbfileext" user="$ftpuser" mode=ftp password="$ftppassword" dst-path="$ftppath/$umdbfilename_$now.$umdbfileext" upload=yes
+:log warn message="UM backup to FTP finished";
+#
+# Remove locally created files
+#
+:log warn message="Removing locally created backups started";
+file remove "$localbackuppath/$umdbfilename_$now.$umdbfileext"
+:log warn message="Removing locally created backups finished";
+#
+:log warn message="Done with UserMan backup";
+## note - for auto email backup please refer to the email section ##
+}
