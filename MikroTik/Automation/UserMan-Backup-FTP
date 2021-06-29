@@ -48,5 +48,10 @@ file remove "$localbackuppath/$umdbfilename_$now.$umdbfileext"
 :log warn message="Removing locally created backups finished";
 #
 :log warn message="Done with UserMan backup";
-## note - for auto email backup please refer to the weekly email under the automation section ##
+
+## note - For email notification and files ##
+/tool e-mail
+set address=("your email domain eg. mail.gmail.com") from=<user@gmail.com> password="(what ever password)" port=587 user=("user@gmail.com")
+
+/tool e-mail send to="(Your Email)" subject="User-Manager Backup" body="Successfully backed up User-Manager database to ftp: $ftppath/$umdbfilename_$now.$umdbfileext" 
 }
