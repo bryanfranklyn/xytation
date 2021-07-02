@@ -1,4 +1,23 @@
+## note - Add a dns list exclusion list due to DNS that keeps on using port 53 or if you have your on DNS note that it can pick up your DNS ##
+## note - One can specify an in-interface=(internet in interface) ##
+## note - can also be done in (/ip firewall raw) but still testing to see if i get any false positives ##
+
 /ip firewall filter
-add action=add-src-to-address-list address-list=Port-Scanner address-list-timeout=1d chain=input comment=Port-Scan dst-address-list=!DNS psd=21,3s,3,1 src-address-list=!DNS
-add action=add-src-to-address-list address-list=Port-Scanner address-list-timeout=1d chain=input dst-address-list=!DNS psd=21,3s,3,1 src-address-list=!DNS
+add action=add-src-to-address-list address-list=Port-Scanner address-list-timeout=1d chain=input comment="Port-Scan Udp" dst-address-list=!DNS protocol=udp psd=21,3s,3,1 src-address-list=!DNS
+add action=add-src-to-address-list address-list=Port-Scanner address-list-timeout=1d chain=input comment="Port-Scan Icmp" dst-address-list=!DNS protocol=icmp psd=21,3s,3,1 src-address-list=!DNS
+add action=add-src-to-address-list address-list=Port-Scanner address-list-timeout=1d chain=input comment="Port-Scan Igmp" dst-address-list=!DNS protocol=igmp psd=21,3s,3,1 src-address-list=!DNS
+add action=add-src-to-address-list address-list=Port-Scanner address-list-timeout=1d chain=input comment="Port-Scan Fin/Syn" dst-address-list=!DNS protocol=tcp psd=21,3s,3,1 src-address-list=!DNS tcp-flags=syn,fin
+add action=add-src-to-address-list address-list=Port-Scanner address-list-timeout=1d chain=input comment="Port-Scan Fin" dst-address-list=!DNS protocol=tcp psd=21,3s,3,1 src-address-list=!DNS tcp-flags=fin
+add action=add-src-to-address-list address-list=Port-Scanner address-list-timeout=1d chain=input comment="Port-Scan Ack" dst-address-list=!DNS protocol=tcp psd=21,3s,3,1 src-address-list=!DNS tcp-flags=ack
+add action=add-src-to-address-list address-list=Port-Scanner address-list-timeout=1d chain=input comment="Port-Scan Rst" dst-address-list=!DNS protocol=tcp psd=21,3s,3,1 src-address-list=!DNS tcp-flags=rst
+add action=add-src-to-address-list address-list=Port-Scanner address-list-timeout=1d chain=input comment="Port-Scan XMAS" dst-address-list=!DNS protocol=tcp psd=21,3s,3,1 src-address-list=!DNS tcp-flags=fin,psh,urg
+add action=add-src-to-address-list address-list=Port-Scanner address-list-timeout=1d chain=input comment="Port-Scan XMAS1" dst-address-list=!DNS protocol=tcp psd=21,3s,3,1 src-address-list=!DNS tcp-flags=syn,rst,ack
+add action=add-src-to-address-list address-list=Port-Scanner address-list-timeout=1d chain=input comment="Port-Scan Syn/Ack" dst-address-list=!DNS protocol=tcp psd=21,3s,3,1 src-address-list=!DNS tcp-flags=syn,ack
+add action=add-src-to-address-list address-list=Port-Scanner address-list-timeout=1d chain=input comment="Port-Scan Ece" dst-address-list=!DNS protocol=tcp psd=21,3s,3,1 src-address-list=!DNS tcp-flags=ece
+add action=add-src-to-address-list address-list=Port-Scanner address-list-timeout=1d chain=input comment="Port-Scan Cwr" dst-address-list=!DNS protocol=tcp psd=21,3s,3,1 src-address-list=!DNS tcp-flags=cwr
+add action=add-src-to-address-list address-list=Port-Scanner address-list-timeout=1d chain=input comment="Port-Scan Urg" dst-address-list=!DNS protocol=tcp psd=21,3s,3,1 src-address-list=!DNS tcp-flags=urg
+add action=add-src-to-address-list address-list=Port-Scanner address-list-timeout=1d chain=input comment="Port-Scan Psh" dst-address-list=!DNS protocol=tcp psd=21,3s,3,1 src-address-list=!DNS tcp-flags=psh
+add action=add-src-to-address-list address-list=Port-Scanner address-list-timeout=1d chain=input comment="Port-Scan Syn" dst-address-list=!DNS protocol=tcp psd=21,3s,3,1 src-address-list=!DNS tcp-flags=syn
+add action=add-src-to-address-list address-list=Port-Scanner address-list-timeout=1d chain=input comment="Port-Scan Null" dst-address-list=!DNS protocol=tcp psd=21,3s,3,1 src-address-list=!DNS tcp-flags=!rst,ack,cwr,ece,fin,psh,syn,urg
+add action=add-src-to-address-list address-list=Port-Scanner address-list-timeout=1d chain=input comment="Port-Scan" dst-address-list=!DNS psd=21,3s,3,1 src-address-list=!DNS
 add action=drop chain=input src-address-list=Port-Scanner
