@@ -1,6 +1,7 @@
 ## note - Add a dns list exclusion list due to DNS that keeps on using port 53 or if you have your on DNS note that it can pick up your DNS ##
 ## note - One can specify an in-interface=(internet in interface) ##
 ## note - can also be done in (/ip firewall raw) but still testing to see if i get any false positives ##
+## note - if you use igmp you can remove line9 ##
 
 /ip firewall filter
 add action=add-src-to-address-list address-list=Port-Scanner address-list-timeout=1d chain=input comment="Port-Scan Udp" dst-address-list=!DNS protocol=udp psd=21,3s,3,1 src-address-list=!DNS
