@@ -52,5 +52,4 @@ port 8291 - Winbox
 port 8728-8729 - API
 port 8443 - https-alt
 port 8883 - mqt(unifi cloud access)
-port 8728 - API
-port 8729 - API-SSL
+port 20561 - mactelnet/macwinbox
