@@ -52,4 +52,4 @@ port 8291 - Winbox
 port 8728-8729 - API
 port 8443 - https-alt
 port 8883 - mqt(unifi cloud access)
-port 20561 - mactelnet/macwinbox
+port 20561 - macwinbox  *note - is used under raw to be dropped, "/ip firewall raw add chain=prerouting protocol=udp dst-port=20561 action=drop" can use "src-port" or "port" blocks macwinbox but when using mac-telnet it picks up that you use that port but doesn't block it*
